@@ -1,2 +1,2 @@
-# at-samples
-Ansible Tower Sample Playbooks
+# AAP Samples
+Ansible Automation Platform Sample Playbooks
