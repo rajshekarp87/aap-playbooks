@@ -10,7 +10,7 @@
        validate_certs: false
        source:
         protocol: http
-        hostname: 100.100.28.4
+        hostname: "{{ source_hostname }}"
         iso_path: /omam/raj/sourcehttps
         iso_name: Custom_ESXi_8.0.0.iso
         is_custom_iso: true
