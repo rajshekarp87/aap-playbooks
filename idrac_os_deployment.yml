@@ -9,9 +9,9 @@
        password: "{{ password }}"
        validate_certs: false
        source:
-        protocol: nfs
-        hostname: 100.100.28.47
-        iso_path: /C:/Shares/NFSShare/newiso
-        iso_name: Custom_ESXi_8.0.0.iso
+        protocol: http
+        hostname: 100.100.28.4
+        iso_path: /omam/raj/sourcehttps
+        iso_name: VMware-VMvisor-Installer-8.0.0-20513097.x86_64-Dell_Customized-A00.iso
         is_custom_iso: true
        os_deployment_timeout: 15
