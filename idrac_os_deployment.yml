@@ -1,0 +1,17 @@
+---
+- hosts: idrac
+  gather_facts: false
+  roles:
+    - role: dellemc.openmanage.idrac_os_deployment
+      vars:
+       hostname: "{{ inventory_hostname }}"
+       username: "{{ user }}"
+       password: "{{ password }}"
+       validate_certs: false
+       source:
+        protocol: nfs
+        hostname: 100.100.28.47
+        iso_path: /C:/Shares/NFSShare/newiso
+        iso_name: Custom_ESXi_8.0.0.iso
+        is_custom_iso: true
+       os_deployment_timeout: 15
