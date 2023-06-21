@@ -1,0 +1,25 @@
+---
+- hosts: idrac
+  gather_facts: false
+  roles:
+    - role: dellemc.openmanage.idrac_os_deployment
+      vars:
+       hostname: "{{ inventory_hostname }}"
+       username: "{{ user }}"
+       password: "{{ password }}"
+       validate_certs: false
+       os_name: esxi
+       os_version: 8
+       esxi_rootpw: Test_123
+       source:
+        protocol: http
+        hostname: "{{ source_hostname }}"
+        iso_path: /omam/raj/sourcehttps
+        iso_name: VMware-VMvisor-Installer-8.0.0-20513097.x86_64-Dell_Customized-A00.iso
+       destination:
+        protocol: http
+        hostname: "{{ destination_hostname }}"
+        iso_path: /omam/raj/destinationhttps
+        mountpoint: C:/omam_test/omam/raj/destinationhttps
+        os_type: windows
+       os_deployment_timeout: 15
