@@ -10,7 +10,7 @@
        validate_certs: false
        os_name: esxi
        os_version: 8
-       esxi_rootpw: Test_123
+       esxi_rootpw: "{{ esxi_password }}"
        source:
         protocol: https
         hostname: "{{ source_hostname }}"
